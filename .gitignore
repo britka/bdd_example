@@ -2,3 +2,5 @@
 build/
 target/
 bdd.iml
+allure-results/
+screenshots/

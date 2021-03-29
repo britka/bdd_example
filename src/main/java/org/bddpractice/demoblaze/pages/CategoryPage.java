@@ -2,6 +2,7 @@ package org.bddpractice.demoblaze.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.bddpractice.demoblaze.enums.SortBy;
 import org.bddpractice.demoblaze.models.Product;
 
@@ -18,6 +19,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class CategoryPage extends BasePage {
     SelenideElement rootElement = $(".category-page");
 
+    @Step("Sort list by {sortBy}")
     public CategoryPage sortBy(SortBy sortBy) {
         rootElement
                 .$(".product-sorting")
@@ -27,6 +29,7 @@ public class CategoryPage extends BasePage {
         return new CategoryPage();
     }
 
+    @Step("Get list of products as list of models")
     public List<Product> getListOfProducts() {
         ElementsCollection products = rootElement.$$(".product-item");
         return products.stream().map(Product::new).collect(Collectors.toList());
