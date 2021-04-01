@@ -66,7 +66,7 @@ public class WebDriverFactory {
                     throw new Exception("Please specify browser for grid");
                 }
 
-                capabilities.setCapability("browserName", "chrome");
+                capabilities.setCapability("browserName", grid_browser);
                 capabilities.setCapability("platformName", Platform.fromString(grid_platform));
                 RemoteWebDriver driver = null;
                 try {

@@ -14,4 +14,7 @@ public interface AppConfig extends Config {
 
     @Key("user.pass")
     String user_pass();
+
+    @Key("app.url")
+    String app_url();
 }

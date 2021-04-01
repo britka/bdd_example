@@ -7,7 +7,7 @@ import org.bddpractice.demoblaze.models.Product;
 import org.bddpractice.demoblaze.pages.BasePage;
 import org.bddpractice.demoblaze.pages.CategoryPage;
 import org.bddpractice.demoblaze.pages.LoginPage;
-import org.bddpractice.demoblaze.utils.PropertiesReader;
+import org.bddpractice.demoblaze.utils.AppPropertiesReader;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -26,13 +26,14 @@ import static com.codeborne.selenide.Selenide.open;
 public class SortingTests extends BaseTest {
     @BeforeClass
     public void beforeTestSorting() {
-        open("http://54.37.125.177/");
+        //  open(AppPropertiesReader.getInstance().getProperty("app.url"));
+        open(appConfig.app_url());
         new BasePage()
                 .mainMenu()
                 .selectMenuItem(MenuItem.LOG_IN, LoginPage.class)
                 .login(appConfig.user_name(), appConfig.user_pass());
-//                .login(PropertiesReader.getInstance().getProperty("user.name"),
-//                        PropertiesReader.getInstance().getProperty("user.pass"));
+        //               .login(AppPropertiesReader.getInstance().getProperty("user.name"),
+        //                     AppPropertiesReader.getInstance().getProperty("user.pass"));
     }
 
     @AfterClass
