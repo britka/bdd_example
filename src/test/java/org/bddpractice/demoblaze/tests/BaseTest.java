@@ -14,7 +14,7 @@ public class BaseTest {
     protected AppConfig appConfig = ConfigFactory.create(AppConfig.class);
 
     @BeforeSuite
-    public void beforeSuite() {
+    public void beforeSuite() throws Exception {
         WebDriverFactory.initDriver();
     }
 
