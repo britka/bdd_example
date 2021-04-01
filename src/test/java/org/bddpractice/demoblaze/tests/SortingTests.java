@@ -7,7 +7,6 @@ import org.bddpractice.demoblaze.models.Product;
 import org.bddpractice.demoblaze.pages.BasePage;
 import org.bddpractice.demoblaze.pages.CategoryPage;
 import org.bddpractice.demoblaze.pages.LoginPage;
-import org.bddpractice.demoblaze.utils.AppPropertiesReader;
 import org.testng.Assert;
 import org.testng.annotations.*;
 

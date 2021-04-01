@@ -17,7 +17,7 @@ public class PropertiesReader {
         return propertiesReader;
     }
 
-    PropertiesReader()  {
+    private PropertiesReader()  {
         properties = new Properties();
         try {
             properties.load(new FileInputStream("classpath:app.properties"));
