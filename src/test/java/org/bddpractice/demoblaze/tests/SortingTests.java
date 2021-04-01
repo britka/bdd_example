@@ -30,8 +30,9 @@ public class SortingTests extends BaseTest {
         new BasePage()
                 .mainMenu()
                 .selectMenuItem(MenuItem.LOG_IN, LoginPage.class)
-                .login(PropertiesReader.getInstance().getProperty("user.name"),
-                        PropertiesReader.getInstance().getProperty("user.pass"));
+                .login(appConfig.user_name(), appConfig.user_pass());
+//                .login(PropertiesReader.getInstance().getProperty("user.name"),
+//                        PropertiesReader.getInstance().getProperty("user.pass"));
     }
 
     @AfterClass
